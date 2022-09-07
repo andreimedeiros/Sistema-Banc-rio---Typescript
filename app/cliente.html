@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--Não foi dado uma instrução de como teria que ser a página então usei os padrões do index.html-->
+
+<h1 class="text-center">Contas Bancárias</h1>
+
+<div id="mensagemView"></div>
+
+<form class="form">
+
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" class="form-control" required autofocus/>
+    </div>
+
+    <div class="form-group">
+        <label>Cpf</label>
+        <input type="text" id="cpf" step="1" />
+    </div>
+
+    <div class="form-group">
+        <label>Conta</label>
+        <input type="text" min="1" step="1" id="conta" class="form-control" value="1" required/>
+    </div>
+
+    <div>
+        <label>Saldo</label>
+        <input id="saldo" type="number" class="form-control" min="0.01" step="0.01" value="0.0" required/>
+    </div>
+
+    <button class="btn btn-primary" type="submit" onclick="clienteController.inserir(event)">Inserir</button>
+</form>
+
+<br>
+<br>
+
+<script src="js/model/conta.js"></script>
+<script src="js/model/conta-bonificada.js"></script>
+<script src="js/model/poupanca.js"></script>
+<script src="js/model/contas.js"></script>
+<script src="js/controller/cliente-controller.js"></script>
+<script src="js/model/cliente.js"></script>
+<script src="js/model/clientes.js"></script>
+<script src="js/model/cliente-especial.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
